@@ -9,6 +9,15 @@ module.exports = {
   chainWebpack: (config) => {
     //方式一：
     // config.resolve.alias.set("@", resolve("./src"));
+    const svgRule = config.module.rule("svg");
+    svgRule.uses.clear();
+    svgRule
+      .use("svg-sprite-loader")
+      .loader("svg-sprite-loader")
+      .options({
+        symbolId:"icon-[name]",
+        include:["./src/Icons"]
+      })
   },
   configureWebpack: (config) => {
     //方式 二：
