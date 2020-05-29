@@ -12,7 +12,7 @@ const routes = [
     meta: {
       name: "主页",
     },
-    icon: "el-icon-star-on",
+    icon: "partner",//"el-icon-star-on",
     children: [
       {
         path: "index",
@@ -36,7 +36,7 @@ const routes = [
     path: "",
     name: "Info",
     component: Layout,
-    icon: "el-icon-phone",
+    icon: "international",//"el-icon-phone",
     meta: {
       name: "信息管理",
     },

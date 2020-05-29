@@ -1,6 +1,9 @@
 <template>
   <div id="Header">
-      我是头部
+    <div @click="clickList()">
+      <svg-icon iconClass="partner" className="partner" class="svg-icon" ></svg-icon>
+    </div>
+      
   </div>
 </template>
 <script>
@@ -8,7 +11,7 @@ export default {
   name : "Header",
   data(){
     return{
-
+      
     }
   },
   create(){
@@ -18,7 +21,9 @@ export default {
 
   },
   methods : {
-
+    clickList(){
+      this.$store.commit('setMenuState')
+    }
   },
   components :{
     
@@ -33,6 +38,9 @@ export default {
         // top: 0;
         // right: 0;
         // left: 250px;
-        box-shadow:0 3px 16px 0 rgba(0 , 0 , 0 ,.1)
+        box-shadow:0 3px 16px 0 rgba(0 , 0 , 0 ,.1);
+        .svg-icon{
+          margin:20px;
+        }
     }
 </style>

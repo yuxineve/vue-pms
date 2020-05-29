@@ -1,6 +1,7 @@
 <template>
   <div id="infoCategory">
-      <svg-icon />
+      <!-- 父组件传值给子组件 -->
+      <svg-icon iconClass="partner font20" className="partner"/>
   </div>
 </template>
 <script>
