@@ -4,6 +4,7 @@ import router from "./router";
 import store from "./store";
 import ElementUI from "element-ui"
 import "element-ui/lib/theme-chalk/index.css";
+import "./router/premit"
 
 //自定义全局组件
 // vue.config.js 需要改变vue指向
@@ -13,6 +14,8 @@ import "./Icons/index.js";
 Vue.use(ElementUI);
 
 Vue.config.productionTip = false;
+
+
 
 new Vue({
   router,

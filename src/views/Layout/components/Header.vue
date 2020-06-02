@@ -15,14 +15,15 @@ export default {
     }
   },
   create(){
-
   },
   mounted(){
 
   },
   methods : {
     clickList(){
-      this.$store.commit('setMenuState')
+    console.log(this.$store.state.app.aaaa)
+      // this.$store.commit('setMenuState') //mutations
+      // this.$store.dispatch('setMenuState') //action
     }
   },
   components :{

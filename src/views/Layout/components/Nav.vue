@@ -39,7 +39,7 @@ export default {
     console.log("路由：",this.$router.options.routes);
     console.log("vuex:",this.$store.state.isCollapse);
     console.log("getter:",this.$store.getters.count);
-    this.$store.commit('setCount',100);
+    // this.$store.commit('setCount',100);
     // this.routers = this.$router.options.routes;
   },
   mounted(){
