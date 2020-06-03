@@ -16,25 +16,25 @@ router.beforeEach((to, from, next) => {
    * next('/index') 参数可以为路径 死循环
    * next()
    */
-  // next();
+  next();
 
   /*
    * token限制登陆
    */
-  if (getToken()) {
-    if(to.path == '/login'){
-      removeToken();
-      next();
-    }else{
-      next();
-    }
-    console.log('存在');
-  } else {
-    console.log('不存在');
-    if(whiteRouter.indexOf(to.path) !== -1) {
-        next();
-    }else{
-        next('/login')
-    }
-  }
+  // if (getToken()) {
+  //   if(to.path == '/login'){
+  //     removeToken();
+  //     next();
+  //   }else{
+  //     next();
+  //   }
+  //   console.log('存在');
+  // } else {
+  //   console.log('不存在');
+  //   if(whiteRouter.indexOf(to.path) !== -1) {
+  //       next();
+  //   }else{
+  //       next('/login')
+  //   }
+  // }
 });

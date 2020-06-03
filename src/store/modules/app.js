@@ -3,18 +3,14 @@
 */
 const app = {
   state: {
-    aaaa:100,
+    aaaa: 100,
+    isCollapse:true,
   },
-  getters: {
-
-  },
+  getters: {},
   mutations: {
     //更改状态值 ---------------- 同步
-
   },
-  actions: {
-
-  },
+  actions: {},
 };
 
 export default app;

@@ -18,9 +18,11 @@
             </template>
             <!-- 子菜单 -->
             <el-menu-item-group>
-              <el-menu-item v-for="(subItem) in item.children" :key="subItem.id"  :index="subItem.path">
-                {{subItem.meta.name}}
-              </el-menu-item>
+              <template v-for="(subItem) in item.children">
+                  <el-menu-item  :key="subItem.id" v-if="!subItem.hidden" :index="subItem.path">
+                    {{subItem.meta.name}}
+                  </el-menu-item>
+              </template>
             </el-menu-item-group>
           </el-submenu>
         </template>

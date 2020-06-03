@@ -9,6 +9,7 @@ import info from "./modules/info.js";
 
 export default new Vuex.Store({
   modules:{
-    app
+    app,
+    info
   }
 });

@@ -12,10 +12,10 @@ const routes = [
     meta: {
       name: "主页",
     },
-    icon: "partner",//"el-icon-star-on",
+    icon: "partner", //"el-icon-star-on",
     children: [
       {
-        path: "index",
+        path: "/",
         name: "Index",
         meta: {
           name: "首页",
@@ -32,36 +32,46 @@ const routes = [
       },
     ],
   },
-  {
-    path: "/login",
-    name:"Login",
-    component: () => import("../views/login.vue")
-  },
+  // {
+  //   path: "/login",
+  //   name:"Login",
+  //   component: () => import("../views/login.vue")
+  // },
   {
     path: "",
-    name: "Info",
+    name: "RouterPage",
     component: Layout,
-    icon: "international",//"el-icon-phone",
+    icon: "international", //"el-icon-phone",
     meta: {
-      name: "信息管理",
+      name: "路由",
     },
     children: [
       {
-        path: "infoIndex",
-        name: "InfoIndex",
+        path: "router",
+        name: "Router",
         meta: {
-          name: "信息列表",
+          name: "五种跳转方式",
         },
-        component: () => import("../views/Info/index.vue"),
+        component: () => import("../views/routerPage/router.vue"),
       },
       {
-        path: "infoCategory",
-        name: "InfoCategory",
+        path: "infoindex",
+        name: "InfoIndex",
+        hidden: true,
         meta: {
           name: "信息分类",
         },
-        component: () => import("../views/Info/category.vue"),
+        component: () => import("../views/routerPage/index.vue"),
       },
+      {
+        path: "riskRouter/:id/:title",
+        name:"Risk",
+        hidden:true,
+        meta: {
+          name: "冒号路由"
+        },
+        component: () => import("../views/routerPage/riskRouter.vue")
+      }
     ],
   },
 ];
